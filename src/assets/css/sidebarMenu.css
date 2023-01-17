@@ -1,0 +1,33 @@
+.sidebar-menu {
+    background: #222222;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.sidebar-menu.open {
+    width: 300px;
+}
+
+.sidebar-menu.collapsed {
+    width: 68px;
+}
+
+.sidebar-menu .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sidebar-menu .menu-btn .hamburger-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    padding: 10px;
+    width: 68px;
+}
