@@ -2,7 +2,7 @@
     text-align: left;
     display: flex;
     align-items: center;
-    margin: 0 5px;
+    margin: 2px 5px;
 }
 
 .sidebar-menu-item a {
@@ -23,8 +23,13 @@
     transform: var(--transition);
 }
 
+.sidebar-menu-item a.active {
+    background: var(--custom-color);
+    color: #ffffff;
+}
+
 .sidebar-menu-item a:hover {
-    background: #325ba8;
+    background: var(--custom-color);
     color: #ffffff;
 }
 

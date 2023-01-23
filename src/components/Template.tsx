@@ -4,6 +4,7 @@ import { SidebarMenusItem, SidebarMenuCard } from '@/types'
 import { SidebarMenu } from '@/components'
 import { FcAdvertising, FcAbout, FcAlarmClock } from 'react-icons/fc'
 import profileImg from '@/assets/img/Avatar.jpg'
+import '@/assets/css/Template.css'
 
 interface TemplateProps extends DefaultProps {
     title?: string
@@ -27,19 +28,11 @@ export const Template: FC<TemplateProps> = ({ children }) => {
     }
 
     return (
-        <section>
+        <main className="main-content" style={{ paddingLeft: isOpen ? '300px' : '68px' }}>
             <SidebarMenu items={items} card={card} isOpen={isOpen} setIsOpen={setIsOpen} />
-            <section
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    marginLeft: isOpen ? '300px' : '68px',
-                    transition: 'var(--transition)',
-                    padding: '20px',
-                }}
-            >
+            <section className="container">
                 {children}
             </section>
-        </section>
+        </main>
     )
 }
