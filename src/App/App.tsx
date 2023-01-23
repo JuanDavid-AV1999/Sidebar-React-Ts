@@ -1,9 +1,16 @@
 import { FC } from 'react'
-import { Home } from '../pages'
-import '../assets/css/App.css'
+import { Config, Home, Test } from '@/pages'
+import '@/assets/css/App.css'
+import { Routes, Route } from 'react-router-dom'
 
 const App: FC = () => {
-    return <Home />
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/config" element={<Config />} />
+            <Route path="/test" element={<Test />} />
+        </Routes>
+    )
 }
 
 export default App

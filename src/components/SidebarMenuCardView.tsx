@@ -1,6 +1,7 @@
 import { FC } from 'react'
-import { SidebarMenuCard, DefaultProps } from '../types'
-import { classNames } from '../util'
+import { SidebarMenuCard, DefaultProps } from '@/types'
+import { classNames } from '@/util'
+import '@/assets/css/SidebarMenuCardView.css'
 
 interface SidebarMenuCardProps extends DefaultProps {
     card: SidebarMenuCard
@@ -8,10 +9,14 @@ interface SidebarMenuCardProps extends DefaultProps {
 }
 
 export const SidebarMenuCardView: FC<SidebarMenuCardProps> = ({ card, isOpen }) => {
-    const { id, displaName, photoUrl, title, url } = card
+    const { displaName, photoUrl, title, url } = card
     return (
         <div className="sidebar-menu-card">
-            <img src={photoUrl} alt="avatar" className="profile" width="100%" />
+            <img
+                src={photoUrl}
+                alt="avatar"
+                className={classNames('profile', !isOpen ? 'collapsed' : '')}
+            />
             <div className={classNames('profile-info', isOpen ? 'open' : 'collapsed')}>
                 <div className="name">{displaName}</div>
                 <div className="title">{title}</div>

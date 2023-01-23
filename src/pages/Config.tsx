@@ -1,10 +1,13 @@
 import { FC } from 'react'
 import { Template } from '@/components'
 
-export const Home: FC = () => {
+interface ConfigProps {}
+
+export const Config: FC = () => {
     return (
         <Template>
-            <h1>Home</h1>
+            <h1>Config</h1>
         </Template>
     )
 }
+

@@ -1,0 +1,39 @@
+.sidebar-menu-card {
+    text-align: center;
+}
+
+.sidebar-menu-card .profile {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.sidebar-menu-card .profile.collapsed {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-menu-card .profile-info {
+    overflow: hidden;
+    height: 80px;
+    transition: var(--transition);
+}
+
+.sidebar-menu-card .profile-info.collapsed {
+    opacity: 0;
+    height: 0;
+}
+
+.sidebar-menu-card .profile-info .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-menu-card .profile-info .url a {
+    color: #79a8ff;
+}
+
+.sidebar-menu-card .profile-info .url a:hover {
+    color: #ffffff;
+}
