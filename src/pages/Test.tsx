@@ -4,9 +4,5 @@ import { FC } from 'react'
 interface TestProps {}
 
 export const Test: FC = () => {
-    return (
-        <Template>
-            <h1>Test</h1>
-        </Template>
-    )
+    return <h1>Test</h1>
 }
